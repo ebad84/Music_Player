@@ -132,3 +132,6 @@ def play_wav(filename):
 # ----------------------------------------
 play_wav("sd/output.wav")
 
+
+
+print("done")
