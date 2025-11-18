@@ -16,4 +16,6 @@ def convert_mp3_for_esp32(input_mp3, output_wav):
     print("Saved:", output_wav)
 
 # مثال:
-convert_mp3_for_esp32("input.mp3", "output.wav")
+convert_mp3_for_esp32(
+    "01. Narvent - Fainted (You’re Wonderful).mp3", 
+    "output.wav")
