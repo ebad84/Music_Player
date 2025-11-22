@@ -122,16 +122,13 @@ def play_wav(filename):
             audio.write(data)
 
             # آپدیت صفحه در حین پخش
-            if show_it == 5:
+            if show_it == 7:
                 draw_screen(song_name)
                 show_it = 0
             show_it+=1
+
 
 # ----------------------------------------
 # اجرای برنامه
 # ----------------------------------------
 play_wav("sd/output.wav")
-
-
-
-print("done")

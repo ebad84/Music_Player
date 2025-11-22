@@ -89,7 +89,7 @@ def play_wav(filename):
                 break
             audio.write(data)
 
-play_wav("tone.wav")
+# play_wav("tone.wav")
 # os.unmount(sd, "/sd")
 # time.sleep(3)
 play_wav("sd/output.wav")
