@@ -29,7 +29,7 @@ def draw_screen(song_name):
 
     # --- 2/3 پایین — ویژوالایزر ---
     graph_height = 44
-    bars = 16
+    bars = 18
     bar_w = 7
 
     for i in range(bars):
@@ -52,8 +52,8 @@ audio = I2S(
     mode=I2S.TX,
     bits=16,
     format=I2S.MONO,
-    rate=16000,
-    ibuf=40000
+    rate=44100,
+    ibuf=65536
 )
 
 # ----------------------------------------
@@ -131,4 +131,5 @@ def play_wav(filename):
 # ----------------------------------------
 # اجرای برنامه
 # ----------------------------------------
-play_wav("sd/output.wav")
+# play_wav("sd/output.wav")
+play_wav("sd/LastNight.wav")

@@ -4,3 +4,6 @@ on `test2.py` edit the line 20, '01. Narvent - Fainted (You’re Wonderful).mp3'
 move the `output.wav` to your root directory in SD card, and put it in the device
 
 plug and install the Micropython firmware and upload the codes on MICROPYTHON folder, run `test1.py`
+
+# Updates:
+run the `flask_server.py` on pc and then `start_server.py` on MC to transfer files to your MC. it is slow, but acceptable and ower WIFI network.(for me, with the default settings, 45kb/s)
