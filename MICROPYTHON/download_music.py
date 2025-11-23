@@ -380,8 +380,8 @@ def main():
     # دانلود فایل
     # فرمت: http://IP:PORT/filename.ext
     success = download_file(
-        url=f"http://{SERVER_IP}:{SERVER_PORT}/LastNight_44100_2.wav",
-        path="sd/LastNight_44100_2.wav",
+        url=f"http://{SERVER_IP}:{SERVER_PORT}/LastNight3.wav",
+        path="sd/LastNight3.wav",
         chunk_size=512  # کاهش chunk برای جلوگیری از MemoryError
     )
     

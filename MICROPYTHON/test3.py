@@ -9,7 +9,7 @@ audio_out = I2S(
     sd=Pin(22),                        # DIN
     mode=I2S.TX,                       
     bits=16,                           # 16 بیت
-    format=I2S.MONO,                   # <<<<<< مونو
+    format=I2S.STEREO,                   # <<<<<< مونو
     rate=44100,                        # همان نرخ خروجی که WAV داشتی
     ibuf=4096
 )
@@ -23,7 +23,7 @@ def play_wav(path):
         f.read(44)
 
         while True:
-            data = f.read(1024)
+            data = f.read(4096)
             if not data:
                 print("breaking")
                 break
@@ -32,6 +32,26 @@ def play_wav(path):
 
     print("Done!")
 
+
+if 1:
+    import machine, os
+    import sdcard
+
+    spi = machine.SPI(1,
+                      baudrate=10000000,
+                      polarity=0,
+                      phase=0,
+                      sck=machine.Pin(18),
+                      mosi=machine.Pin(23),
+                      miso=machine.Pin(19))
+
+    sd = sdcard.SDCard(spi, machine.Pin(5))  # CS = 5
+    os.mount(sd, "/sd")
+
+    print("SD mounted!")
+    print("Files:", os.listdir("/sd"))
+    
+    
 # اجرای تست
-play_wav("LastNight_44100.wav")
+play_wav("sd/LastNight_44100_2.wav")
 
